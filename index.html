@@ -54,16 +54,25 @@
     		overflow: hidden;
     		border: 1px solid #ccc;
     		background-color: #f1f1f1;
-    		border-bottom: 1px solid #333399; 
     	}
 
     	/* Float the list items side by side */
-		ul.tab li {float: left; font-size:20px; margin:0 0 0px 0;font-family: "oswald",sans-serif;font-size: 1.5em;font-weight: 300;}
+		ul.tab li {float: left; font-size:20px; margin:0 0 0px 0;font-family: "oswald",sans-serif;font-size: 1.5em;font-weight: 300;
+			/*border: 1px solid #ccc;*/
+	}
 
+		
+		/* Change background color of links on hover */
+		ul.tab li a:hover {background-color: #ffffff; color: #333399}
+
+		/* Create an active/current tablink class */
+		ul.tab li a:focus, .active {background-color: #ffffff;color:#333399; 
+			/*border-bottom: 1px solid #ffffff */
+		}
 		/* Style the links inside the list items */
 		ul.tab li a {
 		    display: inline-block;
-		    /*color:#333399;*/
+		    /*color:#ffffff;*/
 		    text-align: center;
 		  	padding: 14px 16px;
 		    text-decoration: none;
@@ -71,11 +80,6 @@
 		    font-size: 1em;
 		}
 
-		/* Change background color of links on hover */
-		ul.tab li a:hover {background-color: #ffffff; color: #333399}
-
-		/* Create an active/current tablink class */
-		ul.tab li a:focus, .active {background-color: #ffffff;color:#333399;}
 
 		/* Style the tab content */
 		.tabcontent {
@@ -137,8 +141,8 @@
             Department of Electrical Engineering and Computer Science<br>
             Cleveland State University <br>
             2121 Euclid Ave., Cleveland, OH 44115 <br>
-            Email: <a class="ema">hye9 [at] hawk[dot] iit[dot] edu</a><br>
-<span class="menu"><a target="_blank" href="HongxingYeCV.pdf"> <img src="images/CV.png" width="20"> CV <font color="gray"> (29-Jan-2016)</font> </a> </span>   <!-- <span class="menu"><a href="#publication"><img src="images/publication.png" width="20"> Publications</a></span> -->
+            Email: hye9 [at] hawk[dot] iit[dot] edu<br>
+<!-- <span class="menu"><a target="_blank" href="HongxingYeCV.pdf"> <img src="images/CV.png" width="20"> CV <font color="gray"> (29-Jan-2016)</font> </a> </span>    <span class="menu"><a href="#publication"><img src="images/publication.png" width="20"> Publications</a></span>  -->
             </p>
 
         <p><b>We are looking for highly self-motivated doctoral and master students.</b></p>
@@ -148,6 +152,7 @@
   <li><a href="#" class="tablinks active" onclick="openCity(event, 'bio')">Biography</a></li>
   <li><a href="#" class="tablinks" onclick="openCity(event, 'news')">News</a></li>
   <li><a href="#" class="tablinks" onclick="openCity(event, 'publication')">Publications</a></li>
+  <li><a href="#" class="tablinks" onclick="openCity(event, 'teaching')">Teaching</a></li>
 </ul>
 
 <div id="bio" class="tabcontent" style="display:block;">
@@ -220,6 +225,11 @@
     
     </div>
 
+<div id="teaching" class="tabcontent">
+<ul>
+	<li> EEC670 - Fall 2016: Power Systems Operation</li>
+</ul>
+</div>
 
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
