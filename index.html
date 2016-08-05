@@ -47,8 +47,68 @@
         .emp{color:#6666cc}
         /*#news-list{float: left;}*/
         #pub-list{float:left;}
+        ul.tab {
+ 	   		list-style-type: none;
+	    	margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		border: 1px solid #ccc;
+    		background-color: #f1f1f1;
+    		border-bottom: 1px solid #333399; 
+    	}
+
+    	/* Float the list items side by side */
+		ul.tab li {float: left; font-size:20px; margin:0 0 0px 0;font-family: "oswald",sans-serif;font-size: 1.5em;font-weight: 300;}
+
+		/* Style the links inside the list items */
+		ul.tab li a {
+		    display: inline-block;
+		    /*color:#333399;*/
+		    text-align: center;
+		  	padding: 14px 16px;
+		    text-decoration: none;
+		    transition: 0.2s;
+		    font-size: 1em;
+		}
+
+		/* Change background color of links on hover */
+		ul.tab li a:hover {background-color: #ffffff; color: #333399}
+
+		/* Create an active/current tablink class */
+		ul.tab li a:focus, .active {background-color: #ffffff;color:#333399;}
+
+		/* Style the tab content */
+		.tabcontent {
+		    display: none;
+		    padding: 14px 12px;
+		    border: 1px solid #ccc;
+		    border-top: none;
+		}	
+
      </style>
      <script type="text/javascript">
+
+     	function openCity(evt, cityName) {
+		    // Declare all variables
+		    var i, tabcontent, tablinks;
+
+		    // Get all elements with class="tabcontent" and hide them
+		    tabcontent = document.getElementsByClassName("tabcontent");
+		    for (i = 0; i < tabcontent.length; i++) {
+		        tabcontent[i].style.display = "none";
+		    }
+
+		    // Get all elements with class="tablinks" and remove the class "active"
+		    tablinks = document.getElementsByClassName("tablinks");
+		    for (i = 0; i < tablinks.length; i++) {
+		        tablinks[i].className = tablinks[i].className.replace(" active", "");
+		    }
+
+		    // Show the current tab, and add an "active" class to the link that opened the tab
+		    document.getElementById(cityName).style.display = "block";
+		    evt.currentTarget.className += " active";
+		}
+
      	function setNum(){
      		var listLi = document.getElementById('paper').getElementsByTagName('li');
      		for(var i=0; i<listLi.length; i++)
@@ -78,20 +138,28 @@
             Cleveland State University <br>
             2121 Euclid Ave., Cleveland, OH 44115 <br>
             Email: <a class="ema">hye9 [at] hawk[dot] iit[dot] edu</a><br>
-<span class="menu"><a target="_blank" href="HongxingYeCV.pdf"> <img src="images/CV.png" width="20"> CV <font color="gray"> (29-Jan-2016)</font> </a> </span>   <span class="menu"><a href="#publication"><img src="images/publication.png" width="20"> Publications</a>
+<span class="menu"><a target="_blank" href="HongxingYeCV.pdf"> <img src="images/CV.png" width="20"> CV <font color="gray"> (29-Jan-2016)</font> </a> </span>   <!-- <span class="menu"><a href="#publication"><img src="images/publication.png" width="20"> Publications</a></span> -->
             </p>
 
         <p><b>We are looking for highly self-motivated doctoral and master students.</b></p>
+</div>
 
-        <h3>Biography</h3>
+<ul class="tab">
+  <li><a href="#" class="tablinks active" onclick="openCity(event, 'bio')">Biography</a></li>
+  <li><a href="#" class="tablinks" onclick="openCity(event, 'news')">News</a></li>
+  <li><a href="#" class="tablinks" onclick="openCity(event, 'publication')">Publications</a></li>
+</ul>
+
+<div id="bio" class="tabcontent" style="display:block;">
+        <!-- <h3 >Biography</h3> -->
             <p> Dr. Hongxing Ye joined the Assistant Professor in the Department of Electrical Engineering and Computer Science at Cleveland State University in 2016.
             He received his <b>B.S.</b> degree in <b>Information and Communication Engineering </b>, in 2007, and <b>M.S.</b> degree in <b> Systems Engineering </b>, in 2011, both from Xi’an Jiaotong University, China, and the <b>Ph.D.</b> degree in <b> Electrical Engineering </b> from the Illinois Institute of Technology, Chicago in 2016.  He was a visiting researcher at Energy Division in Argonne National Laboratory from Sept 2015 to Dec 2015.</p>
 
             <p> Dr. Hongxing Ye's research interests include power and energy system, large-scale optimization, electricity market, renewable integration, and cyber-physical system security. A proposal based on his original research was funded by National Science Foundation in 2015. He received <b>Sigma Xi Research Excellence Award </b> at Illinois Institute of Technology in 2016. He was honored as Outstanding Reviewer for IEEE Transactions on Power Systems and IEEE Transactions on Sustainable Energy in 2015.</p>
-        </div>
+</div>
            
-    <article id="pub-list">
-        <h3>News </h3>
+<div id="news" class="tabcontent">
+        <!-- <h3>News </h3> -->
        <ul class="news"> 
        <li> [07/2016] Our paper of <a target="_blank" href="tpwrs_ump.pdf"> "Uncertainty Marginal Price, Transmission Reserve, and Day-ahead Market Clearing with Robust Unit Commitment" </a> was accepted to IEEE Transactions on Power Systems. </li>
        <li> [05/2016] Our paper of <a target="_blank" href="pdf/tpwrs_maxmin.pdf">"MIP Reformulation for Max-min Problems in Two-stage Robust SCUC"</a> was accepted to IEEE Transactions on Power Systems.</li>
@@ -106,17 +174,17 @@
            <li > [09/2015] The proposal of "Market Mechanism for Managing Uncertainties Caused by High Levels of Renewable Generation", prepared with Dr. Zuyi Li, was funded by National Science of Foundation. </li>
            <li> [04/2015] Our paper of <a target="_blank" href="pdf/tsg_TLR.pdf"> "Transmission Line Rating Attack in Two-Settlement Electricity Markets" </a> was accepted to IEEE Transactions on Smart Grid.</li>
         </ul>  
+</div>
 
 
-      <h3 id="publication">Publications</h3>
-
-        <article>
+<div id="publication" class="tabcontent">
+      <!-- <h3>Publications</h3> -->
         <h4>Selected Preprints</h4>
          <ul class="pub">         
             <li><b>Hongxing Ye</b>, and Zuyi Li, “Deliverable Robust Ramping Products in Real-Time Markets”,<u> arXiv:1512.06050 [math.OC]</u>,<a target="_blank" href="http://arxiv.org/abs/1512.06050">(PDF)</a> </li>
             <li><b>Hongxing Ye</b>, Jianhui Wang, and Zuyi Li, “Robust Integration of High-level Dispatchable Renewables in Power System Operation”, <u> arXiv:1512.06036 [math.OC])</u>,<a target="_blank" href="http://arxiv.org/abs/1512.06036"> (PDF)</a> </li>
         </ul>
-       </article>
+
 
         <h4>Published Papers</h4> 
          <ul  class="pub">
@@ -147,10 +215,7 @@
            <h4>Patent</h4>
            <ul class="pub">
            <li>"A Real-Time Traffic Flow Monitoring Device", China, ZL201020246031.2</li>
-           </ul>
-
-        </article>
-        
+           </ul>      
         <div class="clear"></div>
     
     </div>
