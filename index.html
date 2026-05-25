@@ -4,7 +4,7 @@
      <meta name="description" content="Hongxing Ye, Xi'an Jiaotong University, Power Systems">
      <meta name="description" content="叶洪兴, 西安交通大学, 电力系统，控制，优化，能源系统">
      <link rel="alternate" href="https://hxye.github.io/zh/" hreflang="zh" />
-     <link rel="alternate" href="https://hxye.github.io/" hreflang="en" />
+     <link rel="alternate" href="https://hxye.github.io/en/" hreflang="en" />
      <title>Ye, Hongxing 叶洪兴</title>
      
     <!-- <link rel="shortcut icon" type="image/x-icon" href="http://216.47.150.61/%7Ehye9/favicon.ico">   -->
@@ -136,8 +136,8 @@ const userLang = navigator.language || navigator.userLanguage;
 
 // 定义语言版本映射
 const languageMap = {
-  'zh': 'zh/index.html'    // 中文
-  //  'en': 'index.html'    // 英文
+  'zh': 'zh/index.html',    // 中文
+    'en': 'index.html'    // 英文
   // 'ja': '/ja/index.html',    // 日文
   // 'ko': '/ko/index.html'     // 韩文
 };
@@ -150,7 +150,7 @@ if (languageMap[langCode]) {
   window.location.href = languageMap[langCode];
 } else {
   // 默认语言（如英文）
-  // window.location.href = '/en/index.html';
+  window.location.href = '/en/index.html';
 }
 </script>
 

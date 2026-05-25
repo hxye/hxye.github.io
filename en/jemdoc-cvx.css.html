@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="jemdoc, see https://www.cvxgrp.org/jemdoc-cvx/index.html">
+<link rel="stylesheet" href="jemdoc-cvx.css">
+<title></title>
+</head>
+<body>
+<main id="layout-content">
+<p><i><b> jemdoc-cvx default theme.
+</b>
+<b> Modernizes the original jemdoc.css palette and typography while keeping
+</b> the same selectors and overall layout intact. Self-contained: copy this
+<b> file (and the adjacent fonts</i> directory) next to your output html.
+</b>
+<b> Changes from the legacy jemdoc.css:
+</b>   - Body type: Source Serif 4 (variable, woff2, self-hosted), replaces Georgia.
+<b>   - Mono: JetBrains Mono (variable, woff2, self-hosted), replaces Monaco.
+</b>   - Inline &lsquo;<code>code</code>&lsquo; background: cool light gray (was the iconic yellow).
+<b>   - Background: very subtle warm off-white (was pure white).
+</b>   - Heading <i> link color: muted slate-blue (was a more saturated steel-blue).
+<b>   - Heading underline: lifted to a softer gray.
+</b></i>
+</p>
+<p>@font-face {
+font-family: &ldquo;Source Serif 4&rdquo;;
+src: url(&ldquo;fonts/source-serif-4-latin-wght-normal.woff2&rdquo;) format(&ldquo;woff2-variations&rdquo;);
+font-weight: 200 900;
+font-style: normal;
+font-display: swap;
+}
+</p>
+<p>@font-face {
+font-family: &ldquo;Source Serif 4&rdquo;;
+src: url(&ldquo;fonts/source-serif-4-latin-wght-italic.woff2&rdquo;) format(&ldquo;woff2-variations&rdquo;);
+font-weight: 200 900;
+font-style: italic;
+font-display: swap;
+}
+</p>
+<p>@font-face {
+font-family: &ldquo;JetBrains Mono&rdquo;;
+src: url(&ldquo;fonts/jetbrains-mono-latin-wght-normal.woff2&rdquo;) format(&ldquo;woff2-variations&rdquo;);
+font-weight: 100 800;
+font-style: normal;
+font-display: swap;
+}
+</p>
+<p>display: grid;
+grid-template-columns: auto minmax(0, 1fr);
+background:
+}
+</p>
+<p>body {
+background:
+color:
+font-family: &ldquo;Times New Roman&rdquo;, &rsquo;宋体&rsquo;, 'SimSun&rsquo;, &rsquo;微软雅黑&rsquo;, 'Microsoft YaHei&rsquo;, serif;
+padding-bottom: 8px;
+margin: 0;
+font-size: 12pt;
+line-height: 1.5; <i><b> 增大行距，提升中文阅读舒适度 </b></i>
+margin: 1em auto;
+max-width: 1000px;
+padding: 0 1em;
+}
+</p>
+<p>background:
+border: 1px solid
+padding-top: 0.5em;
+padding-left: 8px;
+padding-right: 8px;
+font-size: 1.0em;
+white-space: nowrap;
+text-align: left;
+}
+</p>
+<p>padding-top: 0.0em;
+padding-left: 1.0em;
+padding-right: 1.0em;
+border: none;
+background:
+text-align: left;
+}
+</p>
+<p>line-height: 1.5em;
+margin-left: 0.5em;
+}
+</p>
+<p>code {
+background:
+padding: 0.05em 0.25em;
+border-radius: 3px;
+}
+</p>
+<p>pre, code {
+font-size: 90%;
+font-family: &ldquo;JetBrains Mono&rdquo;, Menlo, Consolas, monospace;
+}
+</p>
+<p>pre code {
+<i><b> Inside &lt;pre&gt; blocks, drop the inline-code chip styling. </b></i>
+background: transparent;
+padding: 0;
+border-radius: 0;
+}
+</p>
+<p>a, a &gt; code {
+color:
+text-decoration: none;
+}
+</p>
+<p>a:hover {
+border-bottom: 1px
+}
+</p>
+<p>color:
+border-bottom: 1px
+}
+
+color:
+text-decoration: none;
+}
+
+text-decoration: none;
+}
+</p>
+<p>div.menu-category {
+border-bottom: 1px solid
+margin-top: 0.8em;
+padding-top: 0.2em;
+padding-bottom: 0.1em;
+font-weight: bold;
+}
+</p>
+<p>div.menu-item {
+padding-left: 16px;
+text-indent: -16px;
+}
+</p>
+<p>div
+padding-bottom: 0.2em;
+margin-bottom: 1.5em;
+border-bottom: 3px double
+}
+</p>
+<p><i><b> Reduce space if we begin the page with a title. </b></i>
+div
+margin-top: -0.7em;
+}
+</p>
+<p>div
+margin-top: 0.0em;
+margin-bottom: 0.0em;
+padding-top: 0em;
+padding-bottom: 0.1em;
+}
+</p>
+<p>em {
+font-style: italic;
+}
+</p>
+<p>strong {
+font-weight: bold;
+}
+</p>
+<p>h1, h2, h3 {
+color:
+margin-top: 0.7em;
+margin-bottom: 0.3em;
+padding-bottom: 0.2em;
+line-height: 1.0;
+padding-top: 0.5em;
+border-bottom: 1px solid
+}
+</p>
+<p>h1 {
+font-size: 165%;
+}
+</p>
+<p>h2 {
+padding-top: 0.8em;
+font-size: 125%;
+}
+</p>
+<p>h2 + h3 {
+padding-top: 0.2em;
+}
+</p>
+<p>h3 {
+font-size: 110%;
+border-bottom: none;
+}
+</p>
+<p>p {
+margin-top: 0.0em;
+margin-bottom: 0.8em;
+padding: 0;
+line-height: 1.4;
+}
+</p>
+<p>pre {
+padding: 0;
+margin: 0;
+}
+</p>
+<p>div
+font-size: small;
+border-top: 1px solid
+padding-top: 0.1em;
+margin-top: 4.0em;
+color:
+}
+</p>
+<p>div
+color:
+}
+</p>
+<p>div
+float: left;
+padding-bottom: 8px;
+}
+</p>
+<p>ul, ol, dl {
+margin-top: 0.2em;
+padding-top: 0;
+margin-bottom: 0.8em;
+}
+</p>
+<p>dt {
+margin-top: 0.5em;
+margin-bottom: 0;
+}
+</p>
+<p>dl {
+margin-left: 20px;
+}
+</p>
+<p>dd {
+color:
+}
+</p>
+<p>dd &gt; *:first-child {
+margin-top: 0;
+}
+</p>
+<p>ul {
+list-style-position: outside;
+list-style-type: square;
+}
+</p>
+<p>p <code> ul, p </code> ol {
+margin-top: -0.5em;
+}
+</p>
+<p>li ul, li ol {
+margin-top: -0.3em;
+}
+</p>
+<p>ol {
+list-style-position: outside;
+list-style-type: decimal;
+}
+</p>
+<p>li p, dd p {
+margin-bottom: 0.3em;
+}
+</p>
+<p>ol ol {
+list-style-type: lower-alpha;
+}
+</p>
+<p>ol ol ol {
+list-style-type: lower-roman;
+}
+</p>
+<p>p + div.codeblock {
+margin-top: -0.6em;
+}
+</p>
+<p>div.codeblock, div.infoblock {
+margin-right: 0%;
+margin-top: 1.2em;
+margin-bottom: 1.3em;
+}
+</p>
+<p>div.blocktitle {
+font-weight: bold;
+color:
+margin-top: 1.2em;
+margin-bottom: 0.1em;
+}
+</p>
+<p>div.blockcontent {
+border: 1px solid
+padding: 0.3em 0.5em;
+}
+</p>
+<p>div.infoblock &gt; div.blockcontent {
+background:
+}
+</p>
+<p>div.blockcontent p <code> ul, div.blockcontent p </code> ol {
+margin-top: 0.4em;
+}
+</p>
+<p>div.infoblock p {
+margin-bottom: 0em;
+}
+</p>
+<p>div.infoblock li p, div.infoblock dd p {
+margin-bottom: 0.5em;
+}
+</p>
+<p>div.infoblock p + p {
+margin-top: 0.8em;
+}
+</p>
+<p>div.codeblock &gt; div.blockcontent {
+background:
+}
+</p>
+<p>span.pycommand {
+color:
+}
+</p>
+<p>span.statement {
+color:
+}
+span.builtin {
+color:
+}
+span.special {
+color:
+}
+span.operator {
+color:
+}
+span.error {
+color:
+}
+span.comment, span.comment &gt; <b>, span.string, span.string &gt; </b> {
+color:
+}
+</p>
+<p>@media print {
+
+display: none;
+}
+</p>
+<p>}
+</p>
+<p>margin: 2px;
+}
+</p>
+<p>padding-left: 0.5em;
+margin-bottom: 0.5em;
+}
+</p>
+<p>margin-top: -0.7em;
+}
+</p>
+<p>div
+margin-bottom: 0.0em;
+padding-bottom: 0.1em;
+padding-top: 0;
+margin-top: 0.5em;
+border-bottom: none;
+}
+</p>
