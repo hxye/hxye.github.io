@@ -137,7 +137,7 @@ const userLang = navigator.language || navigator.userLanguage;
 // 定义语言版本映射
 const languageMap = {
   'zh': 'zh/index.html',    // 中文
-    'en': 'index.html'    // 英文
+    'en': 'en/index.html'    // 英文
   // 'ja': '/ja/index.html',    // 日文
   // 'ko': '/ko/index.html'     // 韩文
 };
@@ -150,7 +150,7 @@ if (languageMap[langCode]) {
   window.location.href = languageMap[langCode];
 } else {
   // 默认语言（如英文）
-  window.location.href = '/en/index.html';
+  window.location.href = 'en/index.html';
 }
 </script>
 
